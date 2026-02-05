@@ -26,3 +26,15 @@ def add_member(names, ranks, divisions,id):
     divisions.append(input("Enter division: "))
     id.append(new_id)
     print("Crew member added successfully.")
+
+def remove_member(names, ranks, divisions, id):
+    target_id = int(input("Enter ID of crew member to remove: "))
+    if target_id in id:
+        idx = id.index( target_id)
+        names.pop(idx)
+        ranks.pop(idx)
+        divisions.pop(idx)
+        id.pop(idx)
+        print("member removed.")
+    else:
+        print("ID not found.")
