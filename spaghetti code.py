@@ -23,7 +23,6 @@ def run_system_monolith():
         print("3. Remove Crew")
         print("4. Analyze Data")
         print("5. Exit")
-        
         opt = input("Select option: ")
     #bug fix 2 - changed '=' to '==' for comparison
         
@@ -32,12 +31,12 @@ def run_system_monolith():
     #bug fix 3 - changed range(10) to range(len(n)) to prevent index out of range error 
             for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
-
-#bug fix 4- added appending to rank and division lists when adding crew member              
+    #bug fix 4- missing colon sytax error             
         elif opt == "2":
             new_name = input("Name: ")
             new_rank = input("Rank: ")
             new_div = input("Division: ")
+#bug fix 5- added appending to rank and division lists when adding crew member      
             n.append(new_name)
             r.append(new_rank)
             d.append(new_div)
@@ -45,7 +44,7 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-     #bug fix 5- added check for crew member existence before attempting to remove
+     #bug fix 6- unprotected indexing. added an 'if' check to ensure the name exists before calling. index()to avoid crashing. 
             if rem in n:
                 idx = n.index(rem)
                 n.pop(idx)
@@ -59,8 +58,10 @@ def run_system_monolith():
             print("Analyzing...")
             count = 0
             for rank in r:
+        #bug fix 7- logic. changed to 'rank == "Captain" or rank == "Commander"'so the second halve of or isnt always true. 
                 if rank == "Captain" or  rank == "Commander": 
                     count += 1 
+        #bug fix 8- type error. added str() to convert count to string for concatenation.
             print("High ranking officers: " + str(count)) 
             
         elif opt == "5":
@@ -80,8 +81,9 @@ def run_system_monolith():
        
         if len(n) > 0:
             print("Database has entries.")
-        else: len(n) == 0:
-        print("Database empty.")
+        #bug fix 9- change if to else for better performance and logical flow. 
+        else: 
+            print("Database empty.")
 
         
         fuel = 100
@@ -92,5 +94,5 @@ def run_system_monolith():
             break 
             
         print("End of cycle.")
-
-run_system_monolith
+        #bug fix 10- added parentheses to properly call the function.
+run_system_monolith ()
