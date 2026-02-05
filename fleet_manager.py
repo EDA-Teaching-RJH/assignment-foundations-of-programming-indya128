@@ -38,3 +38,12 @@ def remove_member(names, ranks, divisions, id):
         print("member removed.")
     else:
         print("ID not found.")
+
+def update_rank(names, ranks, id):
+    target_id = int(input("Enter ID to update: "))
+    if target_id in id:
+        idx = id.index(target_id)
+        ranks[idx] = input(f"Enter newrank for {names[idx]}: ")
+        print("Rank updated.")
+    else:
+        print("ID not found.")
