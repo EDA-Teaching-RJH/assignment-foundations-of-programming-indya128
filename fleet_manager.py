@@ -58,3 +58,13 @@ def search_member(names, ranks, divisions, id):
     for i in range(len(names)):
         if term in names[i].lower() :
             print(f"match:{names[i]}({ranks[i]})")
+
+def filter_by_division(names,divsions):
+    query= input ("enter division (command/operations/sciences):")
+    for i in range(len(names)):
+        if divsions[i] == query:
+            print(f"{names[i]}")
+
+
+
+
