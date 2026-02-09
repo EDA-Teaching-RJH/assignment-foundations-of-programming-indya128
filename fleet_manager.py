@@ -65,6 +65,13 @@ def filter_by_division(names,divsions):
         if divsions[i] == query:
             print(f"{names[i]}")
 
+def calculate_payroll(ranks):
+    total = 0 
+    pay_scale = {"captain": 1000, "commander": 800, "lieutenant commander": 600, "lieutenant": 400, "ensign": 200}
+    for rank in ranks:
+        total += pay_scale.get(ranks,100)
+        return total
+    
 
 
 
