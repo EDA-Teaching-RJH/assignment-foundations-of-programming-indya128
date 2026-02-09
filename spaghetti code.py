@@ -36,7 +36,7 @@ def run_system_monolith():
             new_name = input("Name: ")
             new_rank = input("Rank: ")
             new_div = input("Division: ")
-#bug fix 5- added appending to rank and division lists when adding crew member      
+#bug fix 5- added appending to rank and division lists when adding crew member  
             n.append(new_name)
             r.append(new_rank)
             d.append(new_div)
