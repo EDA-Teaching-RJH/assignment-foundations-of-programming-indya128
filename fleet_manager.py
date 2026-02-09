@@ -52,3 +52,9 @@ def display_roster(names, ranks, divisions, id):
     print(f"{'ID':<5} {'Name':<15} {'Rank':<15} {'Division':<15}")
     for i in range(len(names)):
         print(f"{id[i]:<5} {names[i]:<15} {ranks[i]:<15} {divisions[i]:<15}")
+
+def search_member(names, ranks, divisions, id):
+    term = input("search term "). lower()
+    for i in range(len(names)):
+        if term in names[i].lower() :
+            print(f"match:{names[i]}({ranks[i]})")
