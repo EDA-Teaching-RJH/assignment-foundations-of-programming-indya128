@@ -44,7 +44,7 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
-     #bug fix 6- unprotected indexing. added an 'if' check to ensure the name exists before calling. index()to avoid crashing. 
+     #bug fix 6- unprotected indexing. added an 'if' check to ensure the name exists before calling. index()to avoid crashing.  
             if rem in n:
                 idx = n.index(rem)
                 n.pop(idx)
