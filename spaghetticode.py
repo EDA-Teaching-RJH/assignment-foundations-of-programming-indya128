@@ -29,8 +29,9 @@ def run_system_monolith():
         
         if opt == "1":  
             print("Current Crew List:")
+             #bug fix 3 - changed range(10) to range(len(n)) to prevent index out of range error 
             
-            for i in range(10):
+            for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
