@@ -78,6 +78,34 @@ def count_officers(ranks):
         if rank == "Captain" or rank == "Commander":
             count += 1
     return count
+
+def main():
+    names, ranks, divisions, id = init_database()
+    student_name = input("Enter your name: ")
+    while True:
+        choice = display_menu(student_name)
+        if choice == "1":
+            display_roster(names, ranks, divisions, id)
+        elif choice == "2":
+            add_member(names, ranks, divisions, id)
+        elif choice == "3":
+            remove_member(names, ranks, divisions, id)
+        elif choice == "4":
+            update_rank(names, ranks, id)
+        elif choice == "5":
+            search_member(names, ranks, divisions, id)
+        elif choice == "6":
+            filter_by_division(names, divisions)
+        elif choice == "7":
+            total_payroll = calculate_payroll(ranks)
+            print(f"Total payroll: {total_payroll}")
+        elif choice == "9": break
+
+    if __name__ == "__main__":
+        main()
+
+       
+    
     
 
 
