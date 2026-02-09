@@ -33,7 +33,7 @@ def run_system_monolith():
             
             for i in range(len(n)):
                 print(n[i] + " - " + r[i]) 
-                
+            #bug fix 4- missing colon sytax error        
         elif opt == "2":
             new_name = input("Name: ")
             new_rank = input("Rank: ")
