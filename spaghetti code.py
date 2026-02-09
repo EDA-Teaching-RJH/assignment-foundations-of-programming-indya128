@@ -58,7 +58,7 @@ def run_system_monolith():
             print("Analyzing...")
             count = 0
             for rank in r:
-        #bug fix 7- logic. changed to 'rank == "Captain" or rank == "Commander"'so the second halve of or isnt always true. 
+                #bug fix 7- logic. changed to 'rank == "Captain" or rank == "Commander"'so the second halve of or isnt always true. 
                 if rank == "Captain" or  rank == "Commander": 
                     count += 1 
         #bug fix 8- type error. added str() to convert count to string for concatenation.
